@@ -1,8 +1,6 @@
-# NYC_Race-SAT
+# Academic success in high schools: What factors influence differences in SAT performance across New York City?
 
-Academic success in high schools: What factors influence differences in SAT performance across New York City?
-
-ABSTRACT
+## ABSTRACT
 
 The SAT is a standardized test widely used for college admissions in the United States. The goal of this project was to identify any unintended patterns that would put certain groups at an disadvantage. This is an important step in making the US education system more equal for all. According the US Department of Education website, the challenge of ensuring educational equity is formidable.
 
@@ -12,7 +10,7 @@ In hopes to be more informed on this matter, I would like to know:
 2. Factoring in housing prices, where can one get the best high school education in New York City?
 3. Using crime and US Household median income data to back up the safety scores
 
-METHODS
+## METHODS
 
 This analysis used descriptive statistics and data visualizations to explore the following datasets on New York City high schools.
 
@@ -24,7 +22,7 @@ This analysis used descriptive statistics and data visualizations to explore the
 6. [Graduation outcome](https://data.cityofnewyork.us/Education/Graduation-Outcomes-Classes-Of-2005-2010-School-Le/vh2h-md7a) - The percentage of students who graduated, and other outcome information
 7. [School surveys](https://data.cityofnewyork.us/Education/NYC-School-Survey-2011/mnz3-dyi8) - Surveys of parents, teachers, and students at each school
 8. [NYC Housing Data](https://dev.socrata.com/foundry/data.cityofnewyork.us/5ebm-myj7) -Department of Finance (DOF) maintains records for all property sales in New York City, including sales of family homes in each borough. This list is a summary of neighborhood sales for Tax Class 1, 2 and 3 Family homes.
-9. [NYC Crime Data](https://data.cityofnewyork.us/Public-Safety/NYPD-Complaint-Data-Historic/qgea-i56i/data) - Filter the complaint dates fro the year 2011
+9. [NYC Crime Data](https://data.cityofnewyork.us/Public-Safety/NYPD-Complaint-Data-Historic/qgea-i56i/data) - Dataset includes all valid felony, misdemeanor, and violation crimes reported to the New York City Police Department (NYPD) from 2006 to the end of last year (2017).
 
 
 The extract, transform, and load (ETL) portion was done as part of dataquests instructions and methodology.
