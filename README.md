@@ -8,14 +8,14 @@ In hopes to be more informed on this matter, I would like to know:
 
 1. What factors influence differences in SAT scores and opportunities to attend certain colleges/universities?
 2. Factoring in housing prices, where can one get the best high school education in New York City?
-3. Using crime and US Household median income data to back up the safety scores
+3. Using NYPD Crime Data, can we find any overlaps of high crime in poor performing schools?
 
 ## METHODS
 
 This analysis used descriptive statistics and data visualizations to explore the following datasets on New York City high schools.
 
-1. [Sat scores](https://data.cityofnewyork.us/Education/2012-SAT-Results/f9bf-2cp4) for all NYC high schools in 2011-2012
-2. [School attendance information](https://data.cityofnewyork.us/Education/School-Attendance-and-Enrollment-Statistics-by-Dis/7z8d-msnt) -- Attendance information for each school in New York City
+1. [Sat scores]- (https://data.cityofnewyork.us/Education/2012-SAT-Results/f9bf-2cp4) for all NYC high schools in 2011-2012
+2. [School attendance information](https://data.cityofnewyork.us/Education/School-Attendance-and-Enrollment-Statistics-by-Dis/7z8d-msnt) - Attendance information for each school in New York City
 3. [Class size](https://data.cityofnewyork.us/Education/2010-2011-Class-Size-School-level-detail/urz7-pzb3) - Information on class size for each school
 4. [Advanced Placement](https://data.cityofnewyork.us/Education/AP-College-Board-2010-School-Level-Results/itfs-ms3e) - Advanced Placement (AP) exam results for each high school (passing an optional AP exam in a particular subject can earn a student college credit in that subject)
 5. [Demographic information](https://data.cityofnewyork.us/Education/School-Demographics-and-Accountability-Snapshot-20/ihfw-zy9j) - Demographic information for each school
@@ -23,6 +23,20 @@ This analysis used descriptive statistics and data visualizations to explore the
 7. [School surveys](https://data.cityofnewyork.us/Education/NYC-School-Survey-2011/mnz3-dyi8) - Surveys of parents, teachers, and students at each school
 8. [NYC Housing Data](https://dev.socrata.com/foundry/data.cityofnewyork.us/5ebm-myj7) -Department of Finance (DOF) maintains records for all property sales in New York City, including sales of family homes in each borough. This list is a summary of neighborhood sales for Tax Class 1, 2 and 3 Family homes.
 9. [NYC Crime Data](https://data.cityofnewyork.us/Public-Safety/NYPD-Complaint-Data-Historic/qgea-i56i/data) - Dataset includes all valid felony, misdemeanor, and violation crimes reported to the New York City Police Department (NYPD) from 2006 to the end of last year (2017).
+
+
+### Notebooks
+
+1. Schools.ipynb - This notebook examined the data source from 1 to 8. The goal was to identify any unintended patterns that would put certain groups at an disadvantage
+
+2. NYPD Crime 2001.ipynb - This notebook analyzed 
+
+
+## Libraries used
+
+![]()
+
+## Data Wrangling
 
 
 The extract, transform, and load (ETL) portion was done as part of dataquests instructions and methodology.
