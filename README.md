@@ -60,14 +60,14 @@ Safety and Respect (saf_s_11 ~0.34) and student academic expectations (aca_s_11 
 White and Asian students have a significant positive correlations with SAT scores, whereas  Black and Hispanic students have negative correlations with Hispanics being at a slightly higher disadvantage. This trends in the NYC dataset are in agreement with the achievement gaps among groups of students in the same time period (2011).  https://nces.ed.gov/nationsreportcard/studies/gaps/
 
 
-### Hispanic Students vs SAT Score by School
+### Hispanic Students vs SAT scores by school
 
 ![hispanic_sat](https://github.com/aclao89/NYC_Race-SAT/blob/master/Images/hispanic_sat.PNG)
 
-1. Schools with low average SAT scores and high percentages of hispanic students are often named "International". These schools specialize on students with limited English skills thus these schools tend to score below average because the SAT tests both reading and writing.
+1. Schools with low average SAT scores and high percentages of Hispanic students are often named "International". These schools specialize on students with limited English skills thus these schools tend to score below average because the SAT tests both reading and writing.
 
 
-2. Schools with high average SAT scores and low percentages of hispanics are highly selective ('technical') public schools with prestigious reputations. Here's a list of schools from each borough with avg SAT > 1800:
+2. Schools with high average SAT scores and low percentages of Hispanics are highly selective ('technical') public schools with prestigious reputations. Here's a list of schools from each borough with avg SAT > 1800:
             Manhattan - Stuyvesant High School, Bard High School Early College
             Bronx - Bronx High School and High School of American Studies at Lehman College
             Brooklyn - Brooklyn Technical School
@@ -76,3 +76,65 @@ White and Asian students have a significant positive correlations with SAT score
 
 
 This brings up another question of interest. Out of these high-performing schools (avg. SAT > 1800), what are the demographics?
+
+
+### Demographic of NYC High Schools: "Elite" vs All.
+
+![demo_school](https://github.com/aclao89/NYC_Race-SAT/blob/master/Images/demographic_nyc_schools.png)
+
+Blacks and Hispanics are underrepresented in 'Elite Schools' whereas Asians and Whites are overrepresented. This could be attributed to certain groups having access to more resources.
+
+
+### Correlation of gender and SAT Scores
+
+![gender_sat](https://github.com/aclao89/NYC_Race-SAT/blob/master/Images/gender_sat.jpg)
+
+In the plot above, we can see that females have a positive correlation with SAT scores, whereas males have a negative correlation. However, neither correlation is extremely strong.
+
+
+### Female vs. SAT scores by school
+
+![female_sat](https://github.com/aclao89/NYC_Race-SAT/blob/master/Images/female_sat.png)
+
+I took a closer look at the schools with above average SAT scores (1400).
+
+                        BARD HIGH SCHOOL EARLY COLLEGE
+              PROFESSIONAL PERFORMING ARTS HIGH SCHOOL
+                         ELEANOR ROOSEVELT HIGH SCHOOL
+                                MILLENNIUM HIGH SCHOOL
+                          TALENT UNLIMITED HIGH SCHOOL
+                                    BEACON HIGH SCHOOL
+    FIORELLO H. LAGUARDIA HIGH SCHOOL OF MUSIC & ARTS
+                    BARD HIGH SCHOOL EARLY COLLEGE II
+                           TOWNSEND HARRIS HIGH SCHOOL
+    QUEENS GATEWAY TO HEALTH SCIENCES SECONDARY SCHOOL
+          FRANK SINATRA SCHOOL OF THE ARTS HIGH SCHOOL
+
+1. These schools appears to be very selective liberal arts schools that have high academic standards.
+
+2. Only Manhattan and Queens high schools have > 60% female and scored above 1400. Females in the remaining boroughs may have limited access to good education. If we reduced female  % to 50 and kept > 1400 SAT Scores, it would only return 4 more schools in Brooklyn.
+
+3. More than 50% of schools in Brooklyn and Bronx fall under the average SAT score (~1200).
+
+
+### Advanced Placement (AP) Takers vs. SAT scores by school
+
+![ap_sat](https://github.com/aclao89/NYC_Race-SAT/blob/master/Images/ap_sat.png)
+
+
+Advanced Placement (AP) is a program in the United States and Canada created by the College Board which offers college-level curricula and examinations to high school students. American colleges and universities may grant placement and course credit to students who obtain high scores on the examinations.
+
+
+1. With SAT above 1400, there is a linear correlation between the AP Takers % and SAT scores. Upon more research, the school had high enrollments standards. Thus, students with higher academia would benefit more from these AP classes than other school.
+
+
+2. It's suprising to see schools with high shares of AP takers exhibited near or equal the average SAT score. This draws another questions to why these schools exhibit such poor SAT scores given the high share of AP takers. We can use the Z-Score to determine which factors attribute more. The Z-Score represents, for a given value x of your numerical variable distribution, “how many standard deviations” it is from your variable mean. If Z-Score is positive, then your x value is above the mean. On the other hand, if your Z-Score is negative, then your x value is below that mean.
+
+Otherwise, a high share of AP takers does not indicate a strong SAT score.
+
+
+### AP Subject Matters: High AP, Low SAT & High AP, High SAT
+
+![ao_subjects](https://github.com/aclao89/NYC_Race-SAT/blob/master/Images/ap_subject_sat.png)
+
+Schools with high share of AP takers and low SATs offer a limited selection of courses. They mainly focus on history and literature; surprisingly English literature and composition is highly enrolled. 
