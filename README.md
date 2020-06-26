@@ -137,4 +137,36 @@ Otherwise, a high share of AP takers does not indicate a strong SAT score.
 
 ![ao_subjects](https://github.com/aclao89/NYC_Race-SAT/blob/master/Images/ap_subject_sat.png)
 
-Schools with high share of AP takers and low SATs offer a limited selection of courses. They mainly focus on history and literature; surprisingly English literature and composition is highly enrolled. 
+Schools with high share of AP takers and low SATs offer a limited selection of courses. They mainly focus on history and literature; surprisingly English literature and composition is highly enrolled.
+
+
+## NYC Housing Data
+
+Read-in property sales data from 'NYC Open Data'-server following API documentation found on: https://dev.socrata.com/foundry/data.cityofnewyork.us/5ebm-myj7
+
+#### Info about Dataset
+
+Total Rows: 5979
+Source Domain: data.cityofnewyork.us
+Created: 6/14/2019, 8:17:31 AM
+Last Updated: 4/17/2020, 12:38:45 PM
+Category: City Government
+Attribution: Department of Finance
+Owner: NYC OpenData
+Endpoint Version: 2.1
+
+
+## Number of sales per year by home type
+
+![num_sales_home_type](https://github.com/aclao89/NYC_Race-SAT/blob/master/Images/home_type_sales.jpg)
+
+To no surprise, 1 family homes are the most common types of property sold.
+
+
+## Reverse geocoding for insightful location features
+
+Reverse geocoding is the process of back (reverse) coding of a point location (latitude, longitude) to a readable address or place name. Here's the [documenation](https://blog.batchgeo.com/new-feature-reverse-geocoding/). This was the first time I used this feature to get the names and detailed address from longitude and latitude coordinates.
+
+Below are the steps on how I acquired the reverse geocodes
+
+![geo_rev](https://github.com/aclao89/NYC_Race-SAT/blob/master/Images/rev_code_section.PNG)
