@@ -170,3 +170,18 @@ Reverse geocoding is the process of back (reverse) coding of a point location (l
 Below are the steps on how I acquired the reverse geocodes
 
 ![geo_rev](https://github.com/aclao89/NYC_Race-SAT/blob/master/Images/rev_code_section.PNG)
+
+### Added property data to school dataset
+
+After merging the school and housing datasets, 40% of schools areas have property values associated with them.
+
+
+## Property value vs. SAT score
+
+![housing_val_sat](https://github.com/aclao89/NYC_Race-SAT/blob/master/Images/property_sat.png)
+
+
+[Jamaica](https://www.niche.com/places-to-live/n/jamaica-new-york-city-ny/) and [Sheepshead Bay](https://www.niche.com/places-to-live/n/sheepshead-bay-new-york-city-ny/) have safety/respect scores of 7.4 and 7.9 with above average SAT scores in area under $1 million for a single family house.
+[Woodhaven](https://www.niche.com/places-to-live/n/woodhaven-new-york-city-ny/), [Woodlawn](https://www.niche.com/places-to-live/n/woodlawn-new-york-city-ny/), [Flat-Bush Central](https://www.niche.com/places-to-live/n/flatbush-new-york-city-ny/), and [Cambria Heights](https://www.niche.com/places-to-live/n/cambria-heights-new-york-city-ny/) scored below 7.0 on safety/respect and more expensive than Jamaica and Sheepshead Bay.
+
+[Staten Island Technical High School](https://www.siths.org/) in Oakwood Heights is the best pick in terms of housing price and superb average SAT performance. The housing price in Oakwood Heights are similar to Jamaica but Oakwood has a 300 points advantage on SAT.  
