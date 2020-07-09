@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<head>    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.5.1/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.5.1/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://rawcdn.githack.com/python-visualization/folium/master/folium/templates/leaflet.awesome.rotate.css"/>
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_6cb7e368c0a24ae29022931125f434ff {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+            </style>
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js"></script>
+</head>
+<body>    
+    
+            <h3 align="center" style="font-size:20px"><b>Safety and Respect Score and Average SAT Scores by NYC School Districts</b></h3>
+            
+    
+            <div class="folium-map" id="map_6cb7e368c0a24ae29022931125f434ff" ></div>
+        
+</body>
+<script>    
+    
+            var map_6cb7e368c0a24ae29022931125f434ff = L.map(
+                "map_6cb7e368c0a24ae29022931125f434ff",
+                {
+                    center: [40.693943, -73.98588],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 10,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_2d2d02737b954d5a85646b845b8529e3 = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_6cb7e368c0a24ae29022931125f434ff);
+        
+    
+            var circle_1b74dda5383b440ea4f6118b2a340c88 = L.circle(
+                [40.71902243866714, -73.98237720066633],
+                {"bubblingMouseEvents": true, "color": "#628247", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#628247", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 1354.5, "stroke": true, "weight": 2}
+            ).addTo(map_6cb7e368c0a24ae29022931125f434ff);
+        
+    
+            circle_1b74dda5383b440ea4f6118b2a340c88.bindTooltip(
+                `<div>
+                     District 01 <br> Avg. Safety / Respect Score, students response (color): 6.8 <br> Avg. SAT Scores (size): 1354
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_46c0c1e66e3249fe9b16b34a4008d551 = L.circle(
+                [40.73969949983381, -73.99138567329133],
+                {"bubblingMouseEvents": true, "color": "#4e8f4c", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4e8f4c", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 1295.638184079602, "stroke": true, "weight": 2}
+            ).addTo(map_6cb7e368c0a24ae29022931125f434ff);
+        
+    
+            circle_46c0c1e66e3249fe9b16b34a4008d551.bindTooltip(
+                `<div>
+                     District 02 <br> Avg. Safety / Respect Score, students response (color): 6.9 <br> Avg. SAT Scores (size): 1296
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_fc63e9679dd44929b5eb67292a9f3081 = L.circle(
+                [40.781574109500475, -73.97737016149965],
+                {"bubblingMouseEvents": true, "color": "#697d45", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#697d45", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 1293.4430348258709, "stroke": true, "weight": 2}
+            ).addTo(map_6cb7e368c0a24ae29022931125f434ff);
+        
+    
+            circle_fc63e9679dd44929b5eb67292a9f3081.bindTooltip(
+                `<div>
+                     District 03 <br> Avg. Safety / Respect Score, students response (color): 6.7 <br> Avg. SAT Scores (size): 1293
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_4ca1921df5f14489a0e50eb271cec02f = L.circle(
+                [40.793448842857615, -73.94321519514251],
+                {"bubblingMouseEvents": true, "color": "#518d4b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#518d4b", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 1224.142857142857, "stroke": true, "weight": 2}
+            ).addTo(map_6cb7e368c0a24ae29022931125f434ff);
+        
+    
+            circle_4ca1921df5f14489a0e50eb271cec02f.bindTooltip(
+                `<div>
+                     District 04 <br> Avg. Safety / Respect Score, students response (color): 6.9 <br> Avg. SAT Scores (size): 1224
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_50b2f924c6794942bf9a1db09de63943 = L.circle(
+                [40.81707656500047, -73.94925139814252],
+                {"bubblingMouseEvents": true, "color": "#a15636", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#a15636", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 1285.062686567164, "stroke": true, "weight": 2}
+            ).addTo(map_6cb7e368c0a24ae29022931125f434ff);
+        
+    
+            circle_50b2f924c6794942bf9a1db09de63943.bindTooltip(
+                `<div>
+                     District 05 <br> Avg. Safety / Respect Score, students response (color): 6.3 <br> Avg. SAT Scores (size): 1285
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_c4719a6138334646a7001601935549ab = L.circle(
+                [40.84896996940048, -73.93250229019965],
+                {"bubblingMouseEvents": true, "color": "#48934e", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#48934e", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 1164.643880597015, "stroke": true, "weight": 2}
+            ).addTo(map_6cb7e368c0a24ae29022931125f434ff);
+        
+    
+            circle_c4719a6138334646a7001601935549ab.bindTooltip(
+                `<div>
+                     District 06 <br> Avg. Safety / Respect Score, students response (color): 7.0 <br> Avg. SAT Scores (size): 1165
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_f386d2d66d354e0f9a8600f107830430 = L.circle(
+                [40.81681483861586, -73.9199714805381],
+                {"bubblingMouseEvents": true, "color": "#5d8548", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#5d8548", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 1128.8461538461538, "stroke": true, "weight": 2}
+            ).addTo(map_6cb7e368c0a24ae29022931125f434ff);
+        
+    
+            circle_f386d2d66d354e0f9a8600f107830430.bindTooltip(
+                `<div>
+                     District 07 <br> Avg. Safety / Respect Score, students response (color): 6.8 <br> Avg. SAT Scores (size): 1129
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_326bcb60e6f142548f7a83b68f32d456 = L.circle(
+                [40.8238031502732, -73.86608739018146],
+                {"bubblingMouseEvents": true, "color": "#9a5b38", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#9a5b38", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 1159.6651289009499, "stroke": true, "weight": 2}
+            ).addTo(map_6cb7e368c0a24ae29022931125f434ff);
+        
+    
+            circle_326bcb60e6f142548f7a83b68f32d456.bindTooltip(
+                `<div>
+                     District 08 <br> Avg. Safety / Respect Score, students response (color): 6.4 <br> Avg. SAT Scores (size): 1160
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_aa8a29db22994670833d656437e0d787 = L.circle(
+                [40.83634865645048, -73.90624017769963],
+                {"bubblingMouseEvents": true, "color": "#727743", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#727743", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 1131.9719402985074, "stroke": true, "weight": 2}
+            ).addTo(map_6cb7e368c0a24ae29022931125f434ff);
+        
+    
+            circle_aa8a29db22994670833d656437e0d787.bindTooltip(
+                `<div>
+                     District 09 <br> Avg. Safety / Respect Score, students response (color): 6.7 <br> Avg. SAT Scores (size): 1132
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_db0f5504b5fb4427896543c8ac2f6199 = L.circle(
+                [40.870345318409576, -73.89835998022694],
+                {"bubblingMouseEvents": true, "color": "#7c6f40", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#7c6f40", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 1222.2272727272727, "stroke": true, "weight": 2}
+            ).addTo(map_6cb7e368c0a24ae29022931125f434ff);
+        
+    
+            circle_db0f5504b5fb4427896543c8ac2f6199.bindTooltip(
+                `<div>
+                     District 10 <br> Avg. Safety / Respect Score, students response (color): 6.6 <br> Avg. SAT Scores (size): 1222
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_3e890d7c73e24856bac727fca26543d4 = L.circle(
+                [40.873138329133795, -73.85611953619964],
+                {"bubblingMouseEvents": true, "color": "#b34a31", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#b34a31", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 1165.0, "stroke": true, "weight": 2}
+            ).addTo(map_6cb7e368c0a24ae29022931125f434ff);
+        
+    
+            circle_3e890d7c73e24856bac727fca26543d4.bindTooltip(
+                `<div>
+                     District 11 <br> Avg. Safety / Respect Score, students response (color): 6.2 <br> Avg. SAT Scores (size): 1165
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_29a02bf24f5f460ab8783098ffbbe73f = L.circle(
+                [40.83141226741713, -73.88694636583297],
+                {"bubblingMouseEvents": true, "color": "#31a354", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#31a354", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 1101.8231343283583, "stroke": true, "weight": 2}
+            ).addTo(map_6cb7e368c0a24ae29022931125f434ff);
+        
+    
+            circle_29a02bf24f5f460ab8783098ffbbe73f.bindTooltip(
+                `<div>
+                     District 12 <br> Avg. Safety / Respect Score, students response (color): 7.1 <br> Avg. SAT Scores (size): 1102
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_61875ce1c05f49bfa93c6ca61e4f25c7 = L.circle(
+                [40.692864560077396, -73.97701599069195],
+                {"bubblingMouseEvents": true, "color": "#945f39", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#945f39", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 1237.1876004592423, "stroke": true, "weight": 2}
+            ).addTo(map_6cb7e368c0a24ae29022931125f434ff);
+        
+    
+            circle_61875ce1c05f49bfa93c6ca61e4f25c7.bindTooltip(
+                `<div>
+                     District 13 <br> Avg. Safety / Respect Score, students response (color): 6.4 <br> Avg. SAT Scores (size): 1237
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_eeb133346a334def9f56cc7b74593fcc = L.circle(
+                [40.7115993947862, -73.94835999728535],
+                {"bubblingMouseEvents": true, "color": "#6d7a44", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#6d7a44", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 1179.4599147121535, "stroke": true, "weight": 2}
+            ).addTo(map_6cb7e368c0a24ae29022931125f434ff);
+        
+    
+            circle_eeb133346a334def9f56cc7b74593fcc.bindTooltip(
+                `<div>
+                     District 14 <br> Avg. Safety / Respect Score, students response (color): 6.7 <br> Avg. SAT Scores (size): 1179
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_8f59e406bb924c78b4687995aefb0d8f = L.circle(
+                [40.67597201177826, -73.98925499922188],
+                {"bubblingMouseEvents": true, "color": "#b44931", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#b44931", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 1190.604311774461, "stroke": true, "weight": 2}
+            ).addTo(map_6cb7e368c0a24ae29022931125f434ff);
+        
+    
+            circle_8f59e406bb924c78b4687995aefb0d8f.bindTooltip(
+                `<div>
+                     District 15 <br> Avg. Safety / Respect Score, students response (color): 6.2 <br> Avg. SAT Scores (size): 1191
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_fb0630937e0048fca76e013005288a17 = L.circle(
+                [40.68800751400046, -73.92968620574965],
+                {"bubblingMouseEvents": true, "color": "#de2d26", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#de2d26", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 1120.1097014925374, "stroke": true, "weight": 2}
+            ).addTo(map_6cb7e368c0a24ae29022931125f434ff);
+        
+    
+            circle_fb0630937e0048fca76e013005288a17.bindTooltip(
+                `<div>
+                     District 16 <br> Avg. Safety / Respect Score, students response (color): 5.9 <br> Avg. SAT Scores (size): 1120
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_1c3024b65832440a91b7944401012caf = L.circle(
+                [40.660312690000474, -73.95563569785676],
+                {"bubblingMouseEvents": true, "color": "#cc392b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#cc392b", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 1161.4285714285713, "stroke": true, "weight": 2}
+            ).addTo(map_6cb7e368c0a24ae29022931125f434ff);
+        
+    
+            circle_1c3024b65832440a91b7944401012caf.bindTooltip(
+                `<div>
+                     District 17 <br> Avg. Safety / Respect Score, students response (color): 6.0 <br> Avg. SAT Scores (size): 1161
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_4af9ee6356ec4e1b8ad757c8cf42e341 = L.circle(
+                [40.641862776636835, -73.91472575354513],
+                {"bubblingMouseEvents": true, "color": "#b24b31", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#b24b31", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 1118.0, "stroke": true, "weight": 2}
+            ).addTo(map_6cb7e368c0a24ae29022931125f434ff);
+        
+    
+            circle_4af9ee6356ec4e1b8ad757c8cf42e341.bindTooltip(
+                `<div>
+                     District 18 <br> Avg. Safety / Respect Score, students response (color): 6.2 <br> Avg. SAT Scores (size): 1118
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_380dd90ae61c4cbabe79152e8b4b3c54 = L.circle(
+                [40.67654695925047, -73.8821576699163],
+                {"bubblingMouseEvents": true, "color": "#b84730", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#b84730", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 1103.8333333333333, "stroke": true, "weight": 2}
+            ).addTo(map_6cb7e368c0a24ae29022931125f434ff);
+        
+    
+            circle_380dd90ae61c4cbabe79152e8b4b3c54.bindTooltip(
+                `<div>
+                     District 19 <br> Avg. Safety / Respect Score, students response (color): 6.1 <br> Avg. SAT Scores (size): 1104
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_acb33c9a98c74f1e90e4da8785227775 = L.circle(
+                [40.626751010200465, -74.00619053079966],
+                {"bubblingMouseEvents": true, "color": "#31a354", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#31a354", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 1273.68776119403, "stroke": true, "weight": 2}
+            ).addTo(map_6cb7e368c0a24ae29022931125f434ff);
+        
+    
+            circle_acb33c9a98c74f1e90e4da8785227775.bindTooltip(
+                `<div>
+                     District 20 <br> Avg. Safety / Respect Score, students response (color): 7.1 <br> Avg. SAT Scores (size): 1274
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_f6944c41ee014328a01f6a014a40de8d = L.circle(
+                [40.59359646018228, -73.97846547554512],
+                {"bubblingMouseEvents": true, "color": "#965e39", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#965e39", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 1206.312618724559, "stroke": true, "weight": 2}
+            ).addTo(map_6cb7e368c0a24ae29022931125f434ff);
+        
+    
+            circle_f6944c41ee014328a01f6a014a40de8d.bindTooltip(
+                `<div>
+                     District 21 <br> Avg. Safety / Respect Score, students response (color): 6.4 <br> Avg. SAT Scores (size): 1206
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_888887b59782448f95eae13285fbaae9 = L.circle(
+                [40.61828543450048, -73.95228777274964],
+                {"bubblingMouseEvents": true, "color": "#3e9a50", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3e9a50", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 1450.5, "stroke": true, "weight": 2}
+            ).addTo(map_6cb7e368c0a24ae29022931125f434ff);
+        
+    
+            circle_888887b59782448f95eae13285fbaae9.bindTooltip(
+                `<div>
+                     District 22 <br> Avg. Safety / Respect Score, students response (color): 7.0 <br> Avg. SAT Scores (size): 1450
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_c269178bec6a428f89fe930b32d4072c = L.circle(
+                [40.66858640233382, -73.91229792699966],
+                {"bubblingMouseEvents": true, "color": "#ac4f33", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ac4f33", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 1157.3333333333333, "stroke": true, "weight": 2}
+            ).addTo(map_6cb7e368c0a24ae29022931125f434ff);
+        
+    
+            circle_c269178bec6a428f89fe930b32d4072c.bindTooltip(
+                `<div>
+                     District 23 <br> Avg. Safety / Respect Score, students response (color): 6.2 <br> Avg. SAT Scores (size): 1157
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_e2a7bddf54214e80832153fc5c1e97d7 = L.circle(
+                [40.7406212917697, -73.91151770399966],
+                {"bubblingMouseEvents": true, "color": "#32a253", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#32a253", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 1242.0, "stroke": true, "weight": 2}
+            ).addTo(map_6cb7e368c0a24ae29022931125f434ff);
+        
+    
+            circle_e2a7bddf54214e80832153fc5c1e97d7.bindTooltip(
+                `<div>
+                     District 24 <br> Avg. Safety / Respect Score, students response (color): 7.1 <br> Avg. SAT Scores (size): 1242
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_21b1d2004d5e4be58ebff517634fe8b6 = L.circle(
+                [40.745414434625474, -73.81555759787466],
+                {"bubblingMouseEvents": true, "color": "#4e8f4c", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4e8f4c", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 1357.0, "stroke": true, "weight": 2}
+            ).addTo(map_6cb7e368c0a24ae29022931125f434ff);
+        
+    
+            circle_21b1d2004d5e4be58ebff517634fe8b6.bindTooltip(
+                `<div>
+                     District 25 <br> Avg. Safety / Respect Score, students response (color): 6.9 <br> Avg. SAT Scores (size): 1357
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_54cc4c3b9ffb4262ad2c7ce51a6ac226 = L.circle(
+                [40.74850737000047, -73.75917570219966],
+                {"bubblingMouseEvents": true, "color": "#638146", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#638146", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 1377.6, "stroke": true, "weight": 2}
+            ).addTo(map_6cb7e368c0a24ae29022931125f434ff);
+        
+    
+            circle_54cc4c3b9ffb4262ad2c7ce51a6ac226.bindTooltip(
+                `<div>
+                     District 26 <br> Avg. Safety / Respect Score, students response (color): 6.8 <br> Avg. SAT Scores (size): 1378
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_a8373d41ac35496f984d87c5399cb51f = L.circle(
+                [40.63882803050048, -73.80782323469965],
+                {"bubblingMouseEvents": true, "color": "#975e39", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#975e39", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 1224.3, "stroke": true, "weight": 2}
+            ).addTo(map_6cb7e368c0a24ae29022931125f434ff);
+        
+    
+            circle_a8373d41ac35496f984d87c5399cb51f.bindTooltip(
+                `<div>
+                     District 27 <br> Avg. Safety / Respect Score, students response (color): 6.4 <br> Avg. SAT Scores (size): 1224
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_2053ad94b33a41e5b710dd85ba6216e2 = L.circle(
+                [40.70934436200047, -73.80636738127238],
+                {"bubblingMouseEvents": true, "color": "#757442", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#757442", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 1347.8469470827679, "stroke": true, "weight": 2}
+            ).addTo(map_6cb7e368c0a24ae29022931125f434ff);
+        
+    
+            circle_2053ad94b33a41e5b710dd85ba6216e2.bindTooltip(
+                `<div>
+                     District 28 <br> Avg. Safety / Respect Score, students response (color): 6.6 <br> Avg. SAT Scores (size): 1348
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_90e928ed0dab4eb5a64d251eaf022582 = L.circle(
+                [40.685275962750474, -73.75273976974967],
+                {"bubblingMouseEvents": true, "color": "#c2402d", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#c2402d", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 1181.9298507462686, "stroke": true, "weight": 2}
+            ).addTo(map_6cb7e368c0a24ae29022931125f434ff);
+        
+    
+            circle_90e928ed0dab4eb5a64d251eaf022582.bindTooltip(
+                `<div>
+                     District 29 <br> Avg. Safety / Respect Score, students response (color): 6.1 <br> Avg. SAT Scores (size): 1182
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_1ce221d584804fd39edc0f2fd522e3ab = L.circle(
+                [40.75539829766714, -73.93230589744411],
+                {"bubblingMouseEvents": true, "color": "#3d9b51", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3d9b51", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 1326.3820895522388, "stroke": true, "weight": 2}
+            ).addTo(map_6cb7e368c0a24ae29022931125f434ff);
+        
+    
+            circle_1ce221d584804fd39edc0f2fd522e3ab.bindTooltip(
+                `<div>
+                     District 30 <br> Avg. Safety / Respect Score, students response (color): 7.0 <br> Avg. SAT Scores (size): 1326
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_defb5728f8ac4452915ed703415c58d0 = L.circle(
+                [40.59568025910047, -74.12572598019965],
+                {"bubblingMouseEvents": true, "color": "#836b3e", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#836b3e", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 1382.5, "stroke": true, "weight": 2}
+            ).addTo(map_6cb7e368c0a24ae29022931125f434ff);
+        
+    
+            circle_defb5728f8ac4452915ed703415c58d0.bindTooltip(
+                `<div>
+                     District 31 <br> Avg. Safety / Respect Score, students response (color): 6.5 <br> Avg. SAT Scores (size): 1382
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_1d3612e5d1d24197acab5b3bd36b9d7b = L.circle(
+                [40.69629515800046, -73.91712351233296],
+                {"bubblingMouseEvents": true, "color": "#628247", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#628247", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 1119.5, "stroke": true, "weight": 2}
+            ).addTo(map_6cb7e368c0a24ae29022931125f434ff);
+        
+    
+            circle_1d3612e5d1d24197acab5b3bd36b9d7b.bindTooltip(
+                `<div>
+                     District 32 <br> Avg. Safety / Respect Score, students response (color): 6.8 <br> Avg. SAT Scores (size): 1120
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+    var color_map_d11793f4140344d099e3bc77c89c3812 = {};
+
+    
+    color_map_d11793f4140344d099e3bc77c89c3812.color = d3.scale.threshold()
+              .domain([5.875, 5.87749498997996, 5.87998997995992, 5.882484969939879, 5.88497995991984, 5.8874749498998, 5.88996993987976, 5.892464929859719, 5.894959919839679, 5.897454909819639, 5.8999498997996, 5.902444889779559, 5.904939879759519, 5.907434869739479, 5.909929859719439, 5.9124248496993985, 5.914919839679358, 5.917414829659319, 5.919909819639279, 5.9224048096192385, 5.924899799599198, 5.927394789579158, 5.929889779559118, 5.932384769539079, 5.934879759519038, 5.937374749498998, 5.939869739478958, 5.942364729458918, 5.9448597194388775, 5.947354709418837, 5.949849699398798, 5.952344689378758, 5.9548396793587175, 5.957334669338677, 5.959829659318637, 5.962324649298597, 5.9648196392785575, 5.967314629258517, 5.969809619238477, 5.972304609218437, 5.974799599198397, 5.977294589178356, 5.979789579158316, 5.982284569138277, 5.984779559118237, 5.9872745490981965, 5.989769539078156, 5.992264529058116, 5.994759519038076, 5.9972545090180365, 5.999749498997996, 6.002244488977956, 6.004739478957916, 6.007234468937876, 6.009729458917835, 6.012224448897795, 6.014719438877756, 6.017214428857716, 6.019709418837675, 6.022204408817635, 6.024699398797595, 6.027194388777555, 6.029689378757515, 6.032184368737475, 6.034679358717435, 6.037174348697395, 6.039669338677355, 6.042164328657314, 6.044659318637274, 6.047154308617235, 6.049649298597195, 6.052144288577154, 6.054639278557114, 6.057134268537074, 6.059629258517034, 6.062124248496994, 6.064619238476954, 6.067114228456914, 6.069609218436874, 6.0721042084168335, 6.074599198396793, 6.077094188376753, 6.079589178356714, 6.0820841683366735, 6.084579158316633, 6.087074148296593, 6.089569138276553, 6.092064128256513, 6.094559118236473, 6.097054108216433, 6.099549098196393, 6.102044088176353, 6.1045390781563125, 6.107034068136272, 6.109529058116233, 6.112024048096193, 6.1145190380761525, 6.117014028056112, 6.119509018036072, 6.122004008016032, 6.124498997995992, 6.126993987975952, 6.129488977955912, 6.131983967935872, 6.134478957915832, 6.136973947895791, 6.139468937875751, 6.141963927855711, 6.144458917835672, 6.1469539078156314, 6.149448897795591, 6.151943887775551, 6.154438877755511, 6.156933867735471, 6.159428857715431, 6.161923847695391, 6.164418837675351, 6.166913827655311, 6.16940881763527, 6.17190380761523, 6.17439879759519, 6.176893787575151, 6.17938877755511, 6.18188376753507, 6.18437875751503, 6.18687374749499, 6.1893687374749495, 6.19186372745491, 6.19435871743487, 6.19685370741483, 6.1993486973947896, 6.201843687374749, 6.204338677354709, 6.206833667334669, 6.20932865731463, 6.211823647294589, 6.214318637274549, 6.216813627254509, 6.219308617234469, 6.2218036072144285, 6.224298597194389, 6.226793587174349, 6.229288577154309, 6.2317835671342685, 6.234278557114228, 6.236773547094188, 6.239268537074148, 6.2417635270541085, 6.244258517034068, 6.246753507014028, 6.249248496993988, 6.251743486973948, 6.254238476953907, 6.256733466933868, 6.259228456913828, 6.261723446893788, 6.2642184368737475, 6.266713426853707, 6.269208416833667, 6.271703406813627, 6.2741983967935875, 6.276693386773547, 6.279188376753507, 6.281683366733467, 6.284178356713427, 6.286673346693386, 6.289168336673347, 6.291663326653307, 6.294158316633267, 6.296653306613226, 6.299148296593186, 6.301643286573146, 6.304138276553107, 6.306633266533066, 6.309128256513026, 6.311623246492986, 6.314118236472946, 6.316613226452906, 6.319108216432865, 6.321603206412826, 6.324098196392786, 6.326593186372746, 6.329088176352705, 6.331583166332665, 6.334078156312625, 6.336573146292586, 6.339068136272545, 6.341563126252505, 6.344058116232465, 6.346553106212425, 6.3490480961923845, 6.351543086172344, 6.354038076152305, 6.356533066132265, 6.3590280561122245, 6.361523046092184, 6.364018036072144, 6.366513026052104, 6.369008016032065, 6.371503006012024, 6.373997995991984, 6.376492985971944, 6.378987975951904, 6.3814829659318635, 6.383977955911824, 6.386472945891784, 6.388967935871744, 6.3914629258517035, 6.393957915831663, 6.396452905811623, 6.398947895791583, 6.4014428857715435, 6.403937875751503, 6.406432865731463, 6.408927855711423, 6.411422845691383, 6.413917835671342, 6.416412825651303, 6.418907815631263, 6.421402805611223, 6.4238977955911825, 6.426392785571142, 6.428887775551102, 6.431382765531062, 6.433877755511022, 6.436372745490982, 6.438867735470942, 6.441362725450902, 6.443857715430862, 6.446352705410821, 6.448847695390782, 6.451342685370742, 6.453837675350702, 6.456332665330661, 6.458827655310621, 6.461322645290581, 6.463817635270541, 6.4663126252505005, 6.468807615230461, 6.471302605210421, 6.473797595190381, 6.476292585170341, 6.4787875751503, 6.481282565130261, 6.483777555110221, 6.486272545090181, 6.48876753507014, 6.4912625250501, 6.49375751503006, 6.49625250501002, 6.4987474949899795, 6.50124248496994, 6.5037374749499, 6.50623246492986, 6.5087274549098195, 6.511222444889779, 6.51371743486974, 6.5162124248497, 6.5187074148296595, 6.521202404809619, 6.523697394789579, 6.526192384769539, 6.528687374749499, 6.5311823647294585, 6.533677354709419, 6.536172344689379, 6.538667334669339, 6.5411623246492985, 6.543657314629258, 6.546152304609219, 6.548647294589179, 6.5511422845691385, 6.553637274549098, 6.556132264529058, 6.558627254509018, 6.561122244488978, 6.563617234468937, 6.566112224448898, 6.568607214428858, 6.571102204408818, 6.573597194388777, 6.576092184368737, 6.578587174348698, 6.581082164328658, 6.5835771543086175, 6.586072144288577, 6.588567134268537, 6.591062124248497, 6.593557114228457, 6.596052104208416, 6.598547094188377, 6.601042084168337, 6.603537074148297, 6.606032064128256, 6.608527054108216, 6.611022044088177, 6.613517034068137, 6.616012024048096, 6.618507014028056, 6.621002004008016, 6.623496993987976, 6.6259919839679355, 6.628486973947895, 6.630981963927856, 6.633476953907816, 6.635971943887776, 6.638466933867735, 6.640961923847695, 6.643456913827656, 6.645951903807616, 6.648446893787575, 6.650941883767535, 6.653436873747495, 6.655931863727455, 6.6584268537074145, 6.660921843687374, 6.663416833667335, 6.665911823647295, 6.6684068136272545, 6.670901803607214, 6.673396793587174, 6.675891783567135, 6.6783867735470945, 6.680881763527054, 6.683376753507014, 6.685871743486974, 6.688366733466934, 6.6908617234468934, 6.693356713426854, 6.695851703406814, 6.698346693386774, 6.7008416833667335, 6.703336673346693, 6.705831663326653, 6.708326653306614, 6.7108216432865735, 6.713316633266533, 6.715811623246493, 6.718306613226453, 6.720801603206413, 6.723296593186372, 6.725791583166333, 6.728286573146293, 6.730781563126253, 6.733276553106212, 6.735771543086172, 6.738266533066132, 6.740761523046093, 6.7432565130260524, 6.745751503006012, 6.748246492985972, 6.750741482965932, 6.753236472945892, 6.755731462925851, 6.758226452905812, 6.760721442885772, 6.763216432865732, 6.765711422845691, 6.768206412825651, 6.770701402805611, 6.773196392785572, 6.775691382765531, 6.778186372745491, 6.780681362725451, 6.783176352705411, 6.7856713426853705, 6.78816633266533, 6.790661322645291, 6.793156312625251, 6.7956513026052106, 6.79814629258517, 6.80064128256513, 6.80313627254509, 6.805631262525051, 6.80812625250501, 6.81062124248497, 6.81311623246493, 6.81561122244489, 6.8181062124248495, 6.820601202404809, 6.82309619238477, 6.82559118236473, 6.8280861723446895, 6.830581162324649, 6.833076152304609, 6.835571142284569, 6.8380661322645295, 6.840561122244489, 6.843056112224449, 6.845551102204409, 6.848046092184369, 6.850541082164328, 6.853036072144288, 6.855531062124249, 6.858026052104209, 6.8605210420841685, 6.863016032064128, 6.865511022044088, 6.868006012024048, 6.8705010020040085, 6.872995991983968, 6.875490981963928, 6.877985971943888, 6.880480961923848, 6.882975951903807, 6.885470941883767, 6.887965931863727, 6.890460921843688, 6.892955911823647, 6.895450901803607, 6.897945891783567, 6.900440881763528, 6.902935871743487, 6.905430861723447, 6.907925851703407, 6.910420841683367, 6.912915831663327, 6.915410821643286, 6.917905811623246, 6.920400801603207, 6.922895791583167, 6.925390781563126, 6.927885771543086, 6.930380761523046, 6.932875751503006, 6.935370741482966, 6.937865731462926, 6.940360721442886, 6.942855711422846, 6.9453507014028055, 6.947845691382765, 6.950340681362725, 6.952835671342686, 6.9553306613226455, 6.957825651302605, 6.960320641282565, 6.962815631262525, 6.965310621242486, 6.967805611222445, 6.970300601202405, 6.972795591182365, 6.975290581162325, 6.9777855711422845, 6.980280561122244, 6.982775551102204, 6.985270541082165, 6.9877655310621245, 6.990260521042084, 6.992755511022044, 6.995250501002004, 6.997745490981964, 7.000240480961924, 7.002735470941884, 7.005230460921844, 7.007725450901804, 7.010220440881763, 7.012715430861723, 7.015210420841683, 7.017705410821644, 7.0202004008016035, 7.022695390781563, 7.025190380761523, 7.027685370741483, 7.0301803607214435, 7.032675350701403, 7.035170340681363, 7.037665330661323, 7.040160320641283, 7.042655310621242, 7.045150300601202, 7.047645290581162, 7.050140280561123, 7.052635270541082, 7.055130260521042, 7.057625250501002, 7.060120240480962, 7.0626152304609215, 7.065110220440882, 7.067605210420842, 7.070100200400802, 7.072595190380762, 7.075090180360721, 7.077585170340681, 7.080080160320641, 7.082575150300602, 7.085070140280561, 7.087565130260521, 7.090060120240481, 7.092555110220441, 7.095050100200401, 7.097545090180361, 7.100040080160321, 7.102535070140281, 7.1050300601202405, 7.1075250501002, 7.11002004008016, 7.112515030060121, 7.1150100200400805, 7.11750501002004, 7.12])
+              .range(['#de2d26', '#de2d26', '#de2d26', '#dd2d26', '#dd2e26', '#dd2e26', '#dc2e26', '#dc2e26', '#dc2f26', '#db2f26', '#db2f27', '#db2f27', '#da3027', '#da3027', '#d93027', '#d93027', '#d93027', '#d83127', '#d83127', '#d83127', '#d73127', '#d73228', '#d73228', '#d63228', '#d63228', '#d63328', '#d53328', '#d53328', '#d53328', '#d43428', '#d43428', '#d43429', '#d33429', '#d33529', '#d33529', '#d23529', '#d23529', '#d13529', '#d13629', '#d13629', '#d03629', '#d03629', '#d0372a', '#cf372a', '#cf372a', '#cf372a', '#ce382a', '#ce382a', '#ce382a', '#cd382a', '#cd392a', '#cd392a', '#cc392a', '#cc392b', '#cc392b', '#cb3a2b', '#cb3a2b', '#cb3a2b', '#ca3a2b', '#ca3b2b', '#c93b2b', '#c93b2b', '#c93b2b', '#c83c2b', '#c83c2c', '#c83c2c', '#c73c2c', '#c73d2c', '#c73d2c', '#c63d2c', '#c63d2c', '#c63e2c', '#c53e2c', '#c53e2c', '#c53e2c', '#c43e2d', '#c43f2d', '#c43f2d', '#c33f2d', '#c33f2d', '#c3402d', '#c2402d', '#c2402d', '#c1402d', '#c1412d', '#c1412e', '#c0412e', '#c0412e', '#c0422e', '#bf422e', '#bf422e', '#bf422e', '#be432e', '#be432e', '#be432e', '#bd432e', '#bd432f', '#bd442f', '#bc442f', '#bc442f', '#bc442f', '#bb452f', '#bb452f', '#bb452f', '#ba452f', '#ba462f', '#b9462f', '#b94630', '#b94630', '#b84730', '#b84730', '#b84730', '#b74730', '#b74830', '#b74830', '#b64830', '#b64830', '#b64830', '#b54931', '#b54931', '#b54931', '#b44931', '#b44a31', '#b44a31', '#b34a31', '#b34a31', '#b34b31', '#b24b31', '#b24b31', '#b14b32', '#b14c32', '#b14c32', '#b04c32', '#b04c32', '#b04c32', '#af4d32', '#af4d32', '#af4d32', '#ae4d32', '#ae4e33', '#ae4e33', '#ad4e33', '#ad4e33', '#ad4f33', '#ac4f33', '#ac4f33', '#ac4f33', '#ab5033', '#ab5033', '#ab5033', '#aa5034', '#aa5134', '#a95134', '#a95134', '#a95134', '#a85134', '#a85234', '#a85234', '#a75234', '#a75234', '#a75334', '#a65335', '#a65335', '#a65335', '#a55435', '#a55435', '#a55435', '#a45435', '#a45535', '#a45535', '#a35535', '#a35535', '#a35636', '#a25636', '#a25636', '#a15636', '#a15636', '#a15736', '#a05736', '#a05736', '#a05736', '#9f5836', '#9f5836', '#9f5837', '#9e5837', '#9e5937', '#9e5937', '#9d5937', '#9d5937', '#9d5a37', '#9c5a37', '#9c5a37', '#9c5a37', '#9b5a38', '#9b5b38', '#9b5b38', '#9a5b38', '#9a5b38', '#995c38', '#995c38', '#995c38', '#985c38', '#985d38', '#985d38', '#975d39', '#975d39', '#975e39', '#965e39', '#965e39', '#965e39', '#955f39', '#955f39', '#955f39', '#945f39', '#945f39', '#94603a', '#93603a', '#93603a', '#92603a', '#92613a', '#92613a', '#91613a', '#91613a', '#91623a', '#90623a', '#90623a', '#90623b', '#8f633b', '#8f633b', '#8f633b', '#8e633b', '#8e643b', '#8e643b', '#8d643b', '#8d643b', '#8d643b', '#8c653b', '#8c653c', '#8c653c', '#8b653c', '#8b663c', '#8a663c', '#8a663c', '#8a663c', '#89673c', '#89673c', '#89673c', '#88673d', '#88683d', '#88683d', '#87683d', '#87683d', '#87693d', '#86693d', '#86693d', '#86693d', '#85693d', '#856a3d', '#856a3e', '#846a3e', '#846a3e', '#846b3e', '#836b3e', '#836b3e', '#826b3e', '#826c3e', '#826c3e', '#816c3e', '#816c3e', '#816d3f', '#806d3f', '#806d3f', '#806d3f', '#7f6d3f', '#7f6e3f', '#7f6e3f', '#7e6e3f', '#7e6e3f', '#7e6f3f', '#7d6f3f', '#7d6f40', '#7d6f40', '#7c7040', '#7c7040', '#7c7040', '#7b7040', '#7b7140', '#7a7140', '#7a7140', '#7a7140', '#797240', '#797241', '#797241', '#787241', '#787241', '#787341', '#777341', '#777341', '#777341', '#767441', '#767441', '#767442', '#757442', '#757542', '#757542', '#747542', '#747542', '#747642', '#737642', '#737642', '#727642', '#727742', '#727743', '#717743', '#717743', '#717743', '#707843', '#707843', '#707843', '#6f7843', '#6f7943', '#6f7943', '#6e7943', '#6e7944', '#6e7a44', '#6d7a44', '#6d7a44', '#6d7a44', '#6c7b44', '#6c7b44', '#6c7b44', '#6b7b44', '#6b7b44', '#6a7c44', '#6a7c45', '#6a7c45', '#697c45', '#697d45', '#697d45', '#687d45', '#687d45', '#687e45', '#677e45', '#677e45', '#677e45', '#667f46', '#667f46', '#667f46', '#657f46', '#658046', '#658046', '#648046', '#648046', '#648046', '#638146', '#638147', '#628147', '#628147', '#628247', '#618247', '#618247', '#618247', '#608347', '#608347', '#608347', '#5f8347', '#5f8448', '#5f8448', '#5e8448', '#5e8448', '#5e8548', '#5d8548', '#5d8548', '#5d8548', '#5c8548', '#5c8648', '#5c8648', '#5b8649', '#5b8649', '#5a8749', '#5a8749', '#5a8749', '#598749', '#598849', '#598849', '#588849', '#588849', '#588949', '#57894a', '#57894a', '#57894a', '#56894a', '#568a4a', '#568a4a', '#558a4a', '#558a4a', '#558b4a', '#548b4a', '#548b4a', '#538b4b', '#538c4b', '#538c4b', '#528c4b', '#528c4b', '#528d4b', '#518d4b', '#518d4b', '#518d4b', '#508e4b', '#508e4c', '#508e4c', '#4f8e4c', '#4f8e4c', '#4f8f4c', '#4e8f4c', '#4e8f4c', '#4e8f4c', '#4d904c', '#4d904c', '#4d904c', '#4c904d', '#4c914d', '#4b914d', '#4b914d', '#4b914d', '#4a924d', '#4a924d', '#4a924d', '#49924d', '#49934d', '#49934d', '#48934e', '#48934e', '#48934e', '#47944e', '#47944e', '#47944e', '#46944e', '#46954e', '#46954e', '#45954e', '#45954e', '#45964f', '#44964f', '#44964f', '#43964f', '#43974f', '#43974f', '#42974f', '#42974f', '#42984f', '#41984f', '#41984f', '#419850', '#409850', '#409950', '#409950', '#3f9950', '#3f9950', '#3f9a50', '#3e9a50', '#3e9a50', '#3e9a50', '#3d9b50', '#3d9b51', '#3d9b51', '#3c9b51', '#3c9c51', '#3b9c51', '#3b9c51', '#3b9c51', '#3a9c51', '#3a9d51', '#3a9d51', '#399d52', '#399d52', '#399e52', '#389e52', '#389e52', '#389e52', '#379f52', '#379f52', '#379f52', '#369f52', '#36a052', '#36a053', '#35a053', '#35a053', '#35a153', '#34a153', '#34a153', '#33a153', '#33a153', '#33a253', '#32a253', '#32a253', '#32a254', '#31a354', '#31a354', '#31a354']);
+    
+
+    color_map_d11793f4140344d099e3bc77c89c3812.x = d3.scale.linear()
+              .domain([5.875, 7.12])
+              .range([0, 400]);
+
+    color_map_d11793f4140344d099e3bc77c89c3812.legend = L.control({position: 'topright'});
+    color_map_d11793f4140344d099e3bc77c89c3812.legend.onAdd = function (map) {var div = L.DomUtil.create('div', 'legend'); return div};
+    color_map_d11793f4140344d099e3bc77c89c3812.legend.addTo(map_6cb7e368c0a24ae29022931125f434ff);
+
+    color_map_d11793f4140344d099e3bc77c89c3812.xAxis = d3.svg.axis()
+        .scale(color_map_d11793f4140344d099e3bc77c89c3812.x)
+        .orient("top")
+        .tickSize(1)
+        .tickValues([5.875, 7.12]);
+
+    color_map_d11793f4140344d099e3bc77c89c3812.svg = d3.select(".legend.leaflet-control").append("svg")
+        .attr("id", 'legend')
+        .attr("width", 450)
+        .attr("height", 40);
+
+    color_map_d11793f4140344d099e3bc77c89c3812.g = color_map_d11793f4140344d099e3bc77c89c3812.svg.append("g")
+        .attr("class", "key")
+        .attr("transform", "translate(25,16)");
+
+    color_map_d11793f4140344d099e3bc77c89c3812.g.selectAll("rect")
+        .data(color_map_d11793f4140344d099e3bc77c89c3812.color.range().map(function(d, i) {
+          return {
+            x0: i ? color_map_d11793f4140344d099e3bc77c89c3812.x(color_map_d11793f4140344d099e3bc77c89c3812.color.domain()[i - 1]) : color_map_d11793f4140344d099e3bc77c89c3812.x.range()[0],
+            x1: i < color_map_d11793f4140344d099e3bc77c89c3812.color.domain().length ? color_map_d11793f4140344d099e3bc77c89c3812.x(color_map_d11793f4140344d099e3bc77c89c3812.color.domain()[i]) : color_map_d11793f4140344d099e3bc77c89c3812.x.range()[1],
+            z: d
+          };
+        }))
+      .enter().append("rect")
+        .attr("height", 10)
+        .attr("x", function(d) { return d.x0; })
+        .attr("width", function(d) { return d.x1 - d.x0; })
+        .style("fill", function(d) { return d.z; });
+
+    color_map_d11793f4140344d099e3bc77c89c3812.g.call(color_map_d11793f4140344d099e3bc77c89c3812.xAxis).append("text")
+        .attr("class", "caption")
+        .attr("y", 21)
+        .text('Safety and Respect Score, students response');
+</script>
